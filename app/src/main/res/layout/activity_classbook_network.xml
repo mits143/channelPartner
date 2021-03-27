@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ClassbookNetwork">
+
+    <include layout="@layout/toolbar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabMode="auto"
+        app:tabIndicatorColor="@color/colorWhite"
+        app:tabTextColor="@color/colorWhite">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teacher" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabExpertCareer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Career Expert" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

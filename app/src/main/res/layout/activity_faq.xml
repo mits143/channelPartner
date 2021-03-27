@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.FAQ">
+
+    <include layout="@layout/toolbar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorWhite"
+        app:tabMode="auto"
+        app:tabTextColor="@color/colorWhite">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/general" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_partner" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/service_provdier" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/class_" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teacher" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/student" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/career_experts" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

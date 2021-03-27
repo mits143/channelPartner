@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bkg_login"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_15sdp">
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_gravity="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.channelpartner.utils.TextViewDrawableSize
+                            android:id="@+id/txtCurrentLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/current_level"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_14ssp" />
+
+                        <com.channelpartner.utils.TextViewDrawableSize
+                            android:id="@+id/txtCpNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/cp_number"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_14ssp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtAnalysis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/analysis"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <View
+                        android:layout_width="@dimen/_5sdp"
+                        android:layout_height="0dp" />
+
+                    <TextView
+                        android:id="@+id/txtPromotion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/promotion"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_3sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llPersonal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:id="@+id/llFname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/txtFname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/first_name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtFname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llLname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/last_name"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtLname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/mobile_no"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="phone"
+                                        android:maxLength="10"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtPhone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/email"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textEmailAddress"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtEmail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llStdOther"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/std_other"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtStdOther"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llEstablishmentDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/txtEstablishDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/class_est_date"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtEstablishmentDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llDOB"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/txtDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/d_o_b"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtDOB"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llGender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="Gender"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtGender"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/Address"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/state"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtState"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/city"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtCity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llPincode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/pincode"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtPincode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llCourses"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/courses"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtCoures"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llBoard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/board"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtBoard"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llStandard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/standard"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtStandard"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llMedium"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:hint="@string/medium"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtMedium"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llLandmark"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/landmark"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtLandmark"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llTeachingExp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/teaching_experience1"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtTeachingExp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llRegNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="Registration Number"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtRegistrationNumber"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llGeneration"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/generation"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtGeneration"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llSujbectSpecialities"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/subject_speciality1"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtSubSpecaility"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llRegDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/reg_date"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtRegDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llExpiryDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/expiry_date"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtExpiryDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llIntroducerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="@string/introducer_name"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtIntroducerName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorButton"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llEarnedPercentage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="Earned Percent"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/edtEarnedPercentage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llDesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:focusable="false"
+                                        android:hint="Description"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=":"
+                                        android:textColor="@color/colorLightBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.channelpartner.utils.TextViewDrawableSize
+                                        android:id="@+id/txtDesc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvGallery"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:nestedScrollingEnabled="false"
+                                    android:overScrollMode="never"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent"
+        android:clickable="true"
+        android:padding="@dimen/_130sdp"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:visibility="gone" />
+
+</RelativeLayout>

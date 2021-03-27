@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    android:orientation="vertical"
+    tools:context=".activities.CPRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightGrey"
+        android:orientation="vertical"
+        tools:context=".activities.CPRegistration">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:background="@drawable/bkg_login"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/imgProfile"
+                            android:layout_width="@dimen/_75sdp"
+                            android:layout_height="@dimen/_75sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_profile_pic" />
+
+                        <ImageView
+                            android:id="@+id/imgEdit"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="bottom|right"
+                            android:background="@drawable/bkg_circle"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_edit"
+                            android:tint="@color/colorPrimary" />
+
+
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus40sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="@dimen/_3sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llContact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_10sdp">
+
+                                <com.channelpartner.utils.TextViewDrawableSize
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/contact_details"
+                                    android:textSize="@dimen/_14ssp" />
+
+                                <ImageView
+                                    android:id="@+id/imgContact"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_arror_up"
+                                    android:tint="@color/colorLightBlack" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/colorLightBlack" />
+
+                            <LinearLayout
+                                android:id="@+id/llContactDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp"
+                                android:visibility="visible">
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtFname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/first_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtLname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/last_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/email"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/mobile_no"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtLandline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/alt_mobile_no"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtDOB"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawableRight="@drawable/ic_calendar"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:focusable="false"
+                                    android:hint="@string/d_o_b"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <RadioGroup
+                                    android:id="@+id/radioGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbMale"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/male" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbFemale"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/female" />
+                                </RadioGroup>
+
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/Address"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtLandmark"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/landmark"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoTextState"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawableRight="@drawable/ic_arror_down"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:focusable="false"
+                                    android:hint="@string/select_state"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoTextCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawableRight="@drawable/ic_arror_down"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:focusable="false"
+                                    android:hint="@string/select_city"
+                                    android:imeOptions="actionNext"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoTextPincode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawableRight="@drawable/ic_arror_down"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:focusable="false"
+                                    android:hint="@string/select_pincocde"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlSubmit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:background="@drawable/bkg_button1"
+                                    android:padding="@dimen/_10sdp">
+
+                                    <TextView
+                                        android:id="@+id/btnSubmit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="@string/submit"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <ProgressBar
+                                        android:id="@+id/progressBar"
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_centerInParent="true"
+                                        android:theme="@style/AppTheme.WhiteAccent"
+                                        android:visibility="gone" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llAccount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_10sdp"
+                                android:visibility="gone">
+
+                                <com.channelpartner.utils.TextViewDrawableSize
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/account_details"
+                                    android:textSize="@dimen/_14ssp" />
+
+                                <ImageView
+                                    android:id="@+id/imgAccount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_arror_down"
+                                    android:tint="@color/colorLightBlack" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/colorLightBlack"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/llAccountDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/_10sdp"
+                                android:visibility="gone">
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtHolderName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/account_holder_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtBankName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/bank_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtAccountNo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/account_no"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtIFSCCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/ifsc_code"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapCharacters"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <com.channelpartner.utils.EditTextDrawableSize
+                                    android:id="@+id/edtBranchName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    android:drawableLeft="@drawable/ic_account"
+                                    android:drawablePadding="@dimen/_10sdp"
+                                    android:drawableTint="@color/colorLightBlack"
+                                    android:hint="@string/branch_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/_10sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtPancard"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:gravity="bottom"
+                                        android:hint="@string/pan_card"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textCapCharacters"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgPan"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtAadharCard"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:enabled="false"
+                                        android:gravity="bottom"
+                                        android:hint="@string/aadhar_card"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgAadhar"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtDrivingLicense"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:enabled="false"
+                                        android:gravity="bottom"
+                                        android:hint="@string/driving_license"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgDriving"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtPassort"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:enabled="false"
+                                        android:gravity="bottom"
+                                        android:hint="@string/passport"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgPassprt"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtVoterId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:enabled="false"
+                                        android:gravity="bottom"
+                                        android:hint="@string/voter_id"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgVoter"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.channelpartner.utils.EditTextDrawableSize
+                                        android:id="@+id/edtElectricBill"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:drawableLeft="@drawable/ic_account"
+                                        android:drawablePadding="@dimen/_10sdp"
+                                        android:drawableTint="@color/colorLightBlack"
+                                        android:enabled="false"
+                                        android:gravity="bottom"
+                                        android:hint="@string/electric_bill"
+                                        android:imeOptions="actionNext"
+                                        android:maxLines="1"
+                                        android:padding="@dimen/_10sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <View
+                                        android:layout_width="@dimen/_5sdp"
+                                        android:layout_height="0dp" />
+
+                                    <ImageView
+                                        android:id="@+id/imgElectric"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/border"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@android:drawable/ic_menu_camera" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.DoubleBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:SpinKit_Color="@color/colorWhite" />
+    </RelativeLayout>
+</RelativeLayout>

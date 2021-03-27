@@ -1,0 +1,254 @@
+<resources>
+    <string name="app_name">ChannelPartner</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="pwd_empty">Password cannot be empty!</string>
+    <string name="email_empty">Email cannot be empty</string>
+    <string name="reset">Reset</string>
+    <string name="no_internet_connection">Please check your internet connection</string>
+    <string name="error">Try again later</string>
+    <string name="scan_qr_code_for_business">Scan QR Code for Business</string>
+    <string name="logout">Logout</string>
+    <string name="qr_code">QR Code</string>
+    <string name="chat">Chat</string>
+    <string name="package_value">Package Value</string>
+    <string name="level_chart">Level Chart</string>
+    <string name="my_status">My Status</string>
+    <string name="my_income">My Income</string>
+    <string name="wallet">Wallet</string>
+    <string name="my_profile">My Profile</string>
+    <string name="package_request">Package Request</string>
+    <string name="package_request1">AutoHub Package Request</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="auto_hub">Auto Hub</string>
+    <string name="class_">Class</string>
+    <string name="channel_partner">Channel Partner</string>
+    <string name="otgs_sp_partner">OTGS SP Partner</string>
+    <string name="classbook_network">ClassBook Network</string>
+    <string name="otgs_chnl_partner">OTGS Channel Partner</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="d_o_b">D.O.B</string>
+    <string name="Address">Address</string>
+    <string name="landmark">Landmark</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="landline">Landline</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="account_no">Account No</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="branch_name">Brach Name</string>
+    <string name="pan_card">Pan Card *</string>
+    <string name="aadhar_card">Aadhar Card</string>
+    <string name="driving_license">Driving License</string>
+    <string name="passport">Passport</string>
+    <string name="voter_id">Voter Id</string>
+    <string name="electric_bill">Electricity Bill</string>
+    <string name="class_name">Class Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="class_est_date">Est. Date</string>
+    <string name="alt_mobile_no">Alternate Mobile No</string>
+    <string name="std_other">STD Other</string>
+    <string name="board_details">Select Board Details</string>
+    <string name="standard_details">Select Standard Details</string>
+    <string name="medium_details">Select Medium Details</string>
+    <string name="category_details">Select Category Details</string>
+    <string name="description">Description</string>
+    <string name="teaching_experience">Teaching Experience</string>
+    <string name="teaching_experience1">Teaching Exp</string>
+    <string name="subject_speciality">Subject Speciality</string>
+    <string name="subject_speciality1">Sub Speciality</string>
+    <string name="submit">Submit</string>
+    <string name="gender">Select Gender</string>
+    <string name="nominee_details">Nominee Details</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="qrcode">QR Code</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="expert">Career Expert</string>
+    <string name="class_reg">Class Registration</string>
+    <string name="teacher_reg">Teacher Registration</string>
+    <string name="student_reg">Student Registration</string>
+    <string name="career_expert_reg">Career Expert Registration</string>
+    <string name="cp_reg">Channel Partner Registration</string>
+    <string name="invalid_username_password">Invalid email or password</string>
+    <string name="internal_server_error">Internal server error</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="class_name_empty">Class name cannot be empty</string>
+    <string name="main_services">Main Services</string>
+    <string name="other_services">Other Services</string>
+    <string name="informative_services">Informative Services</string>
+    <string name="search">Search</string>
+    <string name="direct">Direct: 0</string>
+    <string name="indirect">Indirect: 0</string>
+    <string name="view_kyc">View KYC</string>
+    <string name="close">Close</string>
+    <string name="edit">Edit</string>
+    <string name="change_pwd">Change Password</string>
+    <string name="old_pwd">Old Password</string>
+    <string name="new_pwd">New Password</string>
+    <string name="confirm_pwd">Confirm Password</string>
+    <string name="invalid_old_pwd">Invalid old Password</string>
+    <string name="cp_number">C.P Number</string>
+    <string name="analysis">Analysis</string>
+    <string name="promotion">Promotion</string>
+    <string name="generation">Generation</string>
+    <string name="introducer_name">Introducer Name</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="reg_date">Reg. Date</string>
+    <string name="garage_list">Garage List</string>
+    <string name="cp_list">CP List</string>
+    <string name="payment">Payment</string>
+    <string name="subscrpition">Subscription</string>
+    <string name="no_data_found">No data found!\nPull down to refresh</string>
+    <string name="cp_detail">Channel Partner Detail</string>
+    <string name="garage_detail">Garage Detail</string>
+    <string name="student_detail">Student Detail</string>
+    <string name="class_detail">Class Detail</string>
+    <string name="teacher_detail">Teacher Detail</string>
+    <string name="exp_career_detail">Career Expert Detail</string>
+    <string name="sp_partner">Service Provider’s Network</string>
+    <string name="analysis_info">Analysis Info</string>
+    <string name="medium">Medium</string>
+    <string name="standard">Standard</string>
+    <string name="board">Board</string>
+    <string name="two_wheeler_services">Two Wheeler Services</string>
+    <string name="four_wheeler_services">Four Wheeler Services</string>
+    <string name="doorstep_services">DoorStep Services</string>
+    <string name="level_difference_income">Level Difference Income</string>
+    <string name="general">General</string>
+    <string name="service_provdier">Service Provdier</string>
+    <string name="notification">Notification</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="select_year">Select Year</string>
+    <string name="from_month">From Month</string>
+    <string name="to_month">To Month</string>
+    <string name="month">Month</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="account_details">Account Details</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="select_pincocde">Select Pincode</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="done">Done</string>
+    <string name="added_by">Added By</string>
+    <string name="garage_name">Garage Name</string>
+    <string name="contact_person_name">Contact Person Name</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="select_garage_images">Select Garage Images</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="payment_mode">Payment Mode</string>
+    <string name="cash">Cash</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="paytm">Paytm</string>
+    <string name="banking">Banking</string>
+    <string name="cheque">Cheque</string>
+    <string name="selected_services">Selected Services</string>
+    <string name="next">Next</string>
+    <string name="garage_registration">Garage Registration</string>
+    <string name="otp">OTP</string>
+    <string name="services">Services</string>
+    <string name="promotion_stats">Promotion Stats</string>
+    <string name="current_level">Current Level</string>
+    <string name="next_level">Next Level</string>
+    <string name="target">Target</string>
+    <string name="achieved">Achieved</string>
+    <string name="pending">Pending</string>
+    <string name="two_wheeler">Two Wheeler</string>
+    <string name="four_wheeler">Four Wheeler</string>
+    <string name="door_steps">Door Steps</string>
+    <string name="spare_parts">Spare Parts</string>
+    <string name="tyre">Tyre</string>
+    <string name="battery">Battery</string>
+    <string name="decor">Decor</string>
+    <string name="oil_dealer">Oil Dealer</string>
+    <string name="washing">Washing</string>
+    <string name="towing">Towing</string>
+    <string name="denting">Denting</string>
+    <string name="puncture">Puncture</string>
+    <string name="cng_lpg">CNG/LPG</string>
+    <string name="petrol_pump">Petrol Pump</string>
+    <string name="career_experts">Career Experts</string>
+    <string name="class_book">Class Book</string>
+    <string name="status">Status</string>
+    <string name="total">Total</string>
+    <string name="promotion_target">Promotion Target</string>
+    <string name="view_detail">Show Detail</string>
+    <string name="garage_owner_name">Garage Owner Name</string>
+    <string name="renewal_request_date">Renewal Request Date</string>
+    <string name="packages">Packages</string>
+    <string name="reject">Reject</string>
+    <string name="approve">Approve</string>
+    <string name="renewal_detail">Renewal Detail</string>
+    <string name="rewards">Rewards</string>
+    <string name="shop_license">Shop License</string>
+    <string name="kyc">KYC</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="faq">FAQ</string>
+    <string name="classbook_registration">ClassBook Registration</string>
+    <string name="autohub_registration">AutoHub Registration</string>
+    <string name="channel_partner_network">Channel Partner Network</string>
+    <string name="channel_partner_registration">Channel Partner Registration</string>
+    <string name="autohub_network">AutoHub Network</string>
+    <string name="class_registration">Class Registration</string>
+    <string name="student_registration">Student Registration</string>
+    <string name="teacher_registration">Teacher Registration</string>
+    <string name="career_expert_registration">Career Expert Registration</string>
+    <string name="class_reg_no">Class Reg. No</string>
+    <string name="select_class_images">Select Class Images</string>
+    <string name="courses">Courses</string>
+    <string name="statistics">Statistics</string>
+    <string name="total_turnover">Total Turnover</string>
+    <string name="total_income">Total Income</string>
+    <string name="total_garage_registered">Total Garage Registered</string>
+    <string name="total_experts_registered">Total Experts Registered</string>
+    <string name="total_teacher_registered">Total Teacher Registered</string>
+    <string name="total_class_registered">Total Class Registered</string>
+    <string name="total_student_registered">Total Student Registered</string>
+    <string name="individual">Individul Direct Income</string>
+
+    <string-array name="spinSlot">
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+        <item> 9 </item>
+        <item> 10 </item>
+        <item> 11 </item>
+        <item> 12 </item>
+        <item> 13 </item>
+        <item> 14 </item>
+        <item> 15 </item>
+    </string-array>
+
+    <string-array name="type">
+        <item> All </item>
+        <item> Approved by CP </item>
+        <item> Rejected by CP </item>
+        <item> Cancelled by garage </item>
+    </string-array>
+</resources>

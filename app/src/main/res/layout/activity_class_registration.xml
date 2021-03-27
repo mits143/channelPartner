@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey"
+    android:orientation="vertical"
+    tools:context=".activities.ClassRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLightGrey"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <FrameLayout
+                    android:id="@+id/flProfileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="@dimen/_75sdp"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_profile_pic" />
+
+                    <ImageView
+                        android:id="@+id/imgEdit"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="bottom|right"
+                        android:background="@drawable/bkg_circle"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/colorPrimary" />
+
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_8sdp">
+
+                    <EditText
+                        android:id="@+id/cpCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Channel Partner Code"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_8sdp"
+                        android:weightSum="2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <EditText
+                            android:id="@+id/firstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="start"
+                            android:hint="First Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart" />
+
+                        <EditText
+                            android:id="@+id/lastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:gravity="start"
+                            android:hint="Last Name"
+                            android:inputType="textPersonName"
+                            android:textAlignment="viewStart" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/mobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Mobile Number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/altMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Alt. Mobile Number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/dateOfBirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Date of Birth"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/genderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Gender"
+                        android:text="Male"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:background="@drawable/border"
+                        android:gravity="top"
+                        android:hint="Address"
+                        android:lines="3"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="false" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select State"
+                        android:textAlignment="viewStart" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select City"
+                        android:textAlignment="viewStart" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/zipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select ZipCode"
+                        android:text="394221"
+                        android:textAlignment="viewStart" />
+
+                    <EditText
+                        android:id="@+id/board"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select Education Board"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select Medium"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/standard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:gravity="start"
+                        android:hint="Select Education Standard"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/teachingExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Teaching Experience"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/regNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="Registration Number"
+                        android:textAlignment="viewStart"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Select Class Images"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/bkg_button1"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/submit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerInParent="true"
+                        android:theme="@style/AppTheme.WhiteAccent"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.DoubleBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:SpinKit_Color="@color/colorWhite" />
+    </RelativeLayout>
+</RelativeLayout>

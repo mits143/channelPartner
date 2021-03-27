@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Jan"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12ssp" />
+
+    <View
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/txtIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="100"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12ssp" />
+</LinearLayout>
